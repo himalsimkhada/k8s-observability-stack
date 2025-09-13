@@ -25,3 +25,5 @@ kubectl delete crd thanosrulers.monitoring.coreos.com
 kubectl delete sa prometheus -n monitoring
 kubectl delete sa alertmanager -n monitoring
 kubectl delete sa prometheus-operator -n monitoring
+
+kubectl delete clusterrole,clusterrolebinding -l app.kubernetes.io/name=prometheus
