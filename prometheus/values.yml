@@ -11,8 +11,10 @@ alertmanager:
           resources:
             requests:
               storage: 5Gi
+
 grafana:
   enabled: false
+  
 prometheus:
   enabled: true
   thanosService:
