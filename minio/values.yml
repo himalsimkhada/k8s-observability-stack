@@ -1,0 +1,24 @@
+# replicaCount: 1
+auth:
+  accessKey: minioadmin
+  secretKey: minioadmin
+defaultBuckets: ""
+mode: standalone
+ingress:
+  enabled: false
+  ingressClassName: ""
+  hostname: minio.local
+  tls: false
+  extraHosts:
+    - name: minio.local
+    - path: /
+  secrets:
+    - name: tls
+persistence:
+  enabled: true
+  storageClass: longhorn
+  size: 20Gi
+metrics:
+  enabled: true
+console:
+  enabled: false
