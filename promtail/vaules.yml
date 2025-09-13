@@ -1,0 +1,4 @@
+config:
+  enabled: true
+  clients:
+    - url: http://loki-gateway/loki/api/v1/push
