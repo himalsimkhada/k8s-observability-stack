@@ -5,3 +5,8 @@
         access: proxy
         url: http://prometheus-kube-prometheus-prometheus:9090
         isDefault: true
+      - name: Loki
+        type: loki
+        access: proxy
+        url: http://loki-gateway
+        isDefault: false

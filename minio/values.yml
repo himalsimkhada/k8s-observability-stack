@@ -1,12 +1,11 @@
-# replicaCount: 1
 auth:
-  accessKey: minioadmin
-  secretKey: minioadmin
-defaultBuckets: "thanos"
+  rootUser: minioadmin
+  rootPassword: minioadmin
+defaultBuckets: "thanos, loki-chunks"
 mode: standalone
 ingress:
   enabled: false
-  ingressClassName: ""
+  ingressClassName: nginx
   hostname: minio.local
   tls: false
   extraHosts:
