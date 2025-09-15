@@ -5,5 +5,8 @@ config:
 
 serviceMonitor:
   enabled: true
+  namespace: monitoring
   interval: 30s
   scrapeTimeout: 10s
+  labels:
+    release: prometheus

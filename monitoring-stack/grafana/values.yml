@@ -2,6 +2,8 @@ replicas: 1
 
 serviceMonitor:
   enabled: true
+  labels:
+    release: prometheus
 
 ingress:
   enabled: true

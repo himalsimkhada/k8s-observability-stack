@@ -57,3 +57,5 @@ monitoring:
     alerting: true
   serviceMonitor:
     enabled: true
+    labels:
+      release: prometheus

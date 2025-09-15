@@ -12,7 +12,6 @@ controller:
     enabled: true
     serviceMonitor:
       enabled: true
-      namespace: monitoring
       additionalLabels:
         release: prometheus
 
@@ -22,7 +21,6 @@ dex:
     enabled: true
     serviceMonitor:
       enabled: true
-      namespace: monitoring
       additionalLabels:
         release: prometheus
 
@@ -32,7 +30,6 @@ redis:
     enabled: true
     serviceMonitor:
       enabled: true
-      namespace: monitoring
       additionalLabels:
         release: prometheus
 
@@ -42,7 +39,6 @@ server:
     enabled: true
     serviceMonitor:
       enabled: true
-      namespace: monitoring
       additionalLabels:
         release: prometheus
   ingress:
@@ -59,7 +55,6 @@ repoServer:
     enabled: true
     serviceMonitor:
       enabled: true
-      namespace: monitoring
       additionalLabels:
         release: prometheus
 
@@ -69,7 +64,6 @@ applicationSet:
     enabled: true
     serviceMonitor:
       enabled: true
-      namespace: monitoring
       additionalLabels:
         release: prometheus
 
@@ -79,6 +73,5 @@ notifications:
     enabled: true
     serviceMonitor:
       enabled: true
-      namespace: monitoring
       additionalLabels:
         release: prometheus
