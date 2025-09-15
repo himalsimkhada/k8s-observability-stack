@@ -2,7 +2,7 @@ global:
   domain: argocd.local
   addPrometheusAnnotations: true
 
-config:
+configs:
   params:
     server.insecure: true
 
