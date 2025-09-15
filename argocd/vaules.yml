@@ -12,6 +12,7 @@ controller:
     enabled: true
     serviceMonitor:
       enabled: true
+      namespace: monitoring
 
 dex:
   enabled: true
@@ -19,6 +20,7 @@ dex:
     enabled: true
     serviceMonitor:
       enabled: true
+      namespace: monitoring
 
 redis:
   enabled: true
@@ -26,6 +28,7 @@ redis:
     enabled: true
     serviceMonitor:
       enabled: true
+      namespace: monitoring
 
 server:
   replicas: 1
@@ -33,6 +36,7 @@ server:
     enabled: true
     serviceMonitor:
       enabled: true
+      namespace: monitoring
   ingress:
     enabled: true
     ingressClassName: nginx
@@ -47,6 +51,7 @@ repoServer:
     enabled: true
     serviceMonitor:
       enabled: true
+      namespace: monitoring
 
 applicationSet:
   replicas: 1
@@ -54,6 +59,7 @@ applicationSet:
     enabled: true
     serviceMonitor:
       enabled: true
+      namespace: monitoring
 
 notifications:
   enabled: true
@@ -61,5 +67,6 @@ notifications:
     enabled: true
     serviceMonitor:
       enabled: true
+      namespace: monitoring
 
 
