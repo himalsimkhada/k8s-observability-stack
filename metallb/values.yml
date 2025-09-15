@@ -1,0 +1,23 @@
+prometheus:
+  scrapeAnnotations: false
+  serviceAccount: prometheus-kube-prometheus-prometheus
+  namespace: monitoring
+  serviceMonitor:
+    enabled: true
+    speaker:
+      additionalLabels:
+        release: prometheus
+    controller:
+      additionalLabels:
+        release: prometheus
+
+speaker:
+  enabled: true
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/warn: privileged
+
+crds:
+  enabled: true
+  validationFailurePolicy: Fail
