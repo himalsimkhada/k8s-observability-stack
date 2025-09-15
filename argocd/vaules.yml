@@ -36,7 +36,6 @@ server:
   ingress:
     enabled: true
     ingressClassName: nginx
-    hostname: argocd.local
     extraTls:
       - hosts: 
         - argocd.local
