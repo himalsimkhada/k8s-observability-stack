@@ -2,3 +2,8 @@ config:
   enabled: true
   clients:
     - url: http://loki-gateway/loki/api/v1/push
+
+serviceMonitor:
+  enabled: true
+  interval: 30s
+  scrapeTimeout: 10s

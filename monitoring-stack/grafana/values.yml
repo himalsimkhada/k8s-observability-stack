@@ -1,5 +1,8 @@
 replicas: 1
 
+serviceMonitor:
+  enabled: true
+
 ingress:
   enabled: true
   ingressClassName: nginx

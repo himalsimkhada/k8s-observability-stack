@@ -48,3 +48,12 @@ backend:
 
 ruler:
   enabled: false
+
+monitoring:
+  dashboards:
+    enabled: true
+  rules:
+    enabled: true
+    alerting: true
+  serviceMonitor:
+    enabled: true

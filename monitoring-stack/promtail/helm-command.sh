@@ -1,3 +1,3 @@
-helm install promtail grafana/promtail \
+helm upgrade --install promtail grafana/promtail \
   -n monitoring \
   -f values.yml
