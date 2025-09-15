@@ -1,0 +1,66 @@
+global:
+  domain: argocd.local
+  addPrometheusAnnotations: true
+
+config:
+  params:
+    server.insecure: true
+
+controller:
+  replicas: 1
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+
+dex:
+  enabled: true
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+
+redis:
+  enabled: true
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+
+server:
+  replicas: 1
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hostname: argocd.local
+    extraTls:
+      - hosts: 
+        - argocd.local
+        secretName: tls
+
+repoServer:
+  replicas: 1
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+
+applicationSet:
+  replicas: 1
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+
+notifications:
+  enabled: true
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+
+
