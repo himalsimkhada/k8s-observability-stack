@@ -1,0 +1,13 @@
+controller:
+  allowSnippetAnnotations: true
+  ingressClassResource:
+    default: true
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
+      additionalLabels:
+        release: prometheus
+    prometheusRule:
+      enabled: false
+      additionalLabels: {}
