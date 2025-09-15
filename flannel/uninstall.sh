@@ -1,0 +1,1 @@
+helm uninstall flannel --namespace kube-flannel 
