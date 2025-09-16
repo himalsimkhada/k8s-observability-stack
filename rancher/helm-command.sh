@@ -1,0 +1,8 @@
+helm repo add rancher-stable https://releases.rancher.com/server-charts/latest
+
+helm repo update
+
+helm upgrade --install rancher rancher-latest/rancher \
+  --create-namespace \
+  --namespace cattle-system \
+  -f values.yml

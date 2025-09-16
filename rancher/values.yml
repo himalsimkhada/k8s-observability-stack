@@ -1,0 +1,18 @@
+auditLog:
+  enabled: true
+  level: 0
+
+addLocal: "true"
+
+hostname: rancher.local
+
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  tls:
+    source: secret
+    secretName: tls-rancher-ingress
+
+replicas: 3
+
+bootstrapPassword: password

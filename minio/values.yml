@@ -1,0 +1,40 @@
+mode: standalone
+existingSecret: minio-auth-secret
+replicas: 2
+
+persistence:
+  enabled: true
+  storageClass: longhorn
+  size: 20Gi
+
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  hosts: 
+    - minio.local
+  tls:
+    - secretName: tls
+      hosts:
+        - minio.local
+
+consoleIngress:
+  enabled: true
+  ingressClassName: nginx
+  hosts: 
+    - minio-ui.local
+  tls:
+    - secretName: tls
+      hosts:
+        - minio-ui.local
+      
+resources:
+  requests:
+    memory: 2Gi
+
+metrics:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prometheus
+
+
