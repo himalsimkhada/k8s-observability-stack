@@ -10,8 +10,8 @@ alertmanager:
     receivers:
     - name: 'null'
     - name: 'MSTeams'
-      msteamsv2_configs:
-        - webhook_url: https://defaultcd67d1b788004d79a93f556a15d280.f2.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/e1783f53c4eb450490b6a32f51f0aeb1/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=xe517rPF9fqSESLbEEEaBguRSWJelyJDnMkVORszXs8
+      webhook_configs:
+        - url: 'http://prometheus-msteams:2000/alertmanager'
   alertmanagerSpec:
     replicas: 1
     retention: 120h
@@ -61,4 +61,4 @@ prometheus:
           accessModes: ["ReadWriteOnce"]
           resources:
             requests:
-              storage: 10Gi
+              storage: 20Gi

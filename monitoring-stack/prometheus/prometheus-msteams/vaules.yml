@@ -1,0 +1,12 @@
+---
+replicaCount: 1
+
+connectors:
+- teams: https://extensodata.webhook.office.com/webhookb2/fd295592-3aeb-43da-a69a-6df8cddb9845@cd67d1b7-8800-4d79-a93f-556a15d280f2/IncomingWebhook/d3ab8cbee389426cad9c6a0786420ede/3e93350b-8e96-427b-8831-4629c9f447af/V2Qz8zREEGyeZcF2cPKqWn3RQW_eggU8vz_UGfqHJMcqc1
+
+metrics:
+  serviceMonitor:
+    enabled: true
+    additionalLabels:
+      release: prometheus
+    scrapeInterval: 30s
